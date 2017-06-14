@@ -1,4 +1,4 @@
-package np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.FactoryPattern;
+package np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Shapes;
 
 /**
  * Created by MM on 2017-06-08.
