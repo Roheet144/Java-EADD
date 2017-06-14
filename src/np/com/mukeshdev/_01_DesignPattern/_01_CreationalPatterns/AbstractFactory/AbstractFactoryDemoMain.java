@@ -1,5 +1,6 @@
 package np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory;
 
+import np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Color.Color;
 import np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Shapes.Shape;
 
 /**
@@ -9,10 +10,13 @@ public class AbstractFactoryDemoMain {
 
     public static void main(String[] args) {
 
-        ShapeFactory shapeFactory=new ShapeFactory();
-
-        Shape shape=shapeFactory.getShape("Circle");
-
+        //get shape factory
+        AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
+        Shape shape = shapeFactory.getShape("CIRCLE");
         shape.draw();
+
+        AbstractFactory colorFactory = FactoryProducer.getFactory("COLOR");
+        Color color = colorFactory.getColor("RED");
+        color.fill();
     }
 }

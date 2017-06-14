@@ -3,10 +3,10 @@ package np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactor
 /**
  * Created by MM on 2017-06-14.
  */
-public class Red implements Color {
+public class Blue  implements Color {
 
     @Override
     public void fill() {
-        System.out.println("Red Color");
+        System.out.println("Blue Color");
     }
 }

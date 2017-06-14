@@ -1,32 +1,37 @@
 package np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory;
 
+import np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Color.Color;
 import np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Shapes.Circle;
-import np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Shapes.Square;
+import np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Shapes.Rectangle;
 import np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Shapes.Shape;
-import np.com.mukeshdev._01_DesignPattern._01_CreationalPatterns.AbstractFactory.Shapes.Triangle;
 
 /**
  * Created by MM on 2017-06-08.
  */
-public class ShapeFactory {
+public class ShapeFactory extends AbstractFactory {
 
+    @Override
     public Shape getShape(String shapeType){
-        if(shapeType==null){
+
+        if(shapeType == null){
             return null;
         }
 
-        if(shapeType.equalsIgnoreCase("Circle")){
+        if(shapeType.equalsIgnoreCase("CIRCLE")){
             return new Circle();
+
+        }else if(shapeType.equalsIgnoreCase("RECTANGLE")){
+            return new Rectangle();
+
+        }else if(shapeType.equalsIgnoreCase("SQUARE")){
+            return new Rectangle();
         }
 
-        if(shapeType.equalsIgnoreCase("Square")){
-            return new Square();
-        }
+        return null;
+    }
 
-        if(shapeType.equalsIgnoreCase("Triangle")){
-            return new Triangle();
-        }
-
+    @Override
+    Color getColor(String color) {
         return null;
     }
 }
